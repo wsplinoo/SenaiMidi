@@ -1,0 +1,64 @@
+@import url('https://fonts.cdnfonts.com/css/kinkee');
+
+:root{
+    --cor-primaria: #fbaed3;
+    --cor-secundaria: #a4a4a4;
+    --cor-terciaria: #8a8a8a;
+    --cor-quartenaria: #fa7ab8;
+    --cor-quintenaria: #ef529e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffa2cf;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-family: 'Kinkee', sans-serif;
+    font-size: 1.8em;
+}
+.teclado{
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e4e4e4 100%);
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: -2px 6px 10px 0px #dd89b2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.tecla{
+    background-color: #ffffff;
+    box-shadow: 1px 0px 7px 0px #dd89b2;
+    height: 120px;
+    width: 120px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Kinkee', sans-serif;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+.tecla.ativa,
+.tecla:active{
+    background-color: var(--cor-primaria);
+    border: 4px var(--cor-primaria);
+    box-shadow: 3px 3px 0 #c9759e inset;
+    color: #ffffff;
+    outline: none;
+}
+.tecla.focus,
+.tecla:focus{
+    outline: none;
+    box-shadow: 1px 1px 10px var(--cor-quintenaria);
+}
+.tecla.ativa:focus,
+.tecla:active:focus{
+    box-shadow: 3px 3px 0 #d48bae inset, 1px 1px 10px var(--cor-quintenaria);
+}
